@@ -1,2 +1,0 @@
-This is a check file,
-If you see this then the docker/application is working.
