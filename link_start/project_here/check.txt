@@ -1,2 +1,0 @@
-You Should See this under /home/vagrant
-This is a check file to make sure everything is working fine. :) 
