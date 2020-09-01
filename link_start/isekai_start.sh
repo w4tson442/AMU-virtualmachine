@@ -5,6 +5,14 @@
 # 3. 
 
 echo "============ START ISEKAI ============"
+# install apache2(web server)
+# link: (https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)
+sudo apt update
+sudo apt install -y apache2
+
+#moving check.html into the document root
 sudo cp -r /vagrant/* /home/vagrant
-#NOTE: moving files form /vagrant actually moves them out of host machine
+sudo cp -r /home/vagrant/project_here/* /var/www/html
+
+
 echo "============= END ISEKAI ============="

@@ -4,6 +4,19 @@
 
 1. Download [vagrant](https://www.vagrantup.com/downloads)
 2. Download [VIrtualBox](https://www.virtualbox.org/)
+3. GITCLONE TOYO's ISEKAI && go to the directory in command prompt
+4. Start up Vagrant!: ``` vagrant up ```
+5. Destroy Vagrant!: ``` vagrant destroy ```
+6. Check if Vagrant is Up!: ``` vagrant status ```
+7. ok now you understand the basic commands for vagrant.
+8. Now start up vagrant and go to: [localhost](http://127.0.0.1:8080/check.html)
+9. If you see the messages from check.html congratz! You can start!
+
+---
+
+1. I have moved the contents of ISEKAI in /home/vagrant
+2. I have moved the contents of project_here into /var/www/html
+
 ---
 **created by:** Justin Ichiro Toyomitsu <br/>
 **email:** ichitsurume@gmail.com

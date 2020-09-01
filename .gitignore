@@ -1,1 +1,3 @@
 link_start/.vagrant/*
+link_start/project_here/*
+!link_start/project_here/check.html
