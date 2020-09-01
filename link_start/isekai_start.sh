@@ -5,5 +5,6 @@
 # 3. 
 
 echo "============ START ISEKAI ============"
-
+sudo cp -r /vagrant/* /home/vagrant
+#NOTE: moving files form /vagrant actually moves them out of host machine
 echo "============= END ISEKAI ============="
