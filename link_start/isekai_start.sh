@@ -1,3 +1,4 @@
+#!/bin/bash
 # BY: Justin Ichiro Toyomitsu
 #main script to install basic neccessities
 # 1. installing Apache
@@ -14,5 +15,7 @@ sudo apt install -y apache2
 sudo cp -r /vagrant/* /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
 
-
+#install which language(default php)?
+#sh language_installs/php.sh
+#sudo service apache2 restart
 echo "============= END ISEKAI ============="
