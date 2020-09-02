@@ -2,3 +2,4 @@ link_start/.vagrant/*
 link_start/project_here/*
 !link_start/project_here/check.html
 link_start/ubuntu-bionic-18.04-cloudimg-console.log
+link_start/ubuntu-xenial-16.04-cloudimg-console.log
