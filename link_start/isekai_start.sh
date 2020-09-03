@@ -21,7 +21,20 @@ sudo cp -r /home/vagrant/project_here/* /var/www/html
 sudo service apache2 restart
 
 echo "---------- INSTALL LANGUAGE ----------"
+#if you want to add a language, change it here
 sh language_installs/php_script.sh
 echo "-------------- FINISHED --------------"
+
+#setting up DATABASE
+# 1. create user and identification for future access
+# 2. example will be the following
+sudo mysql -e "create database isekai;
+create user 'isekai'@'localhost' identified by 'test123';
+grant all privileges on isekai.* to 'isekai'@'localhost';
+flush privileges;"
+# 3. access by mysql -u ____ -h _____ -p
+# 4. -u is the user
+# 5. -h is the host (if localhost then leave empty)
+# 6. hit enter and type in the password
 
 echo "============= END ISEKAI ============="
