@@ -9,7 +9,7 @@ echo "============ START ISEKAI ============"
 sudo apt install -y apache2 mysql-server
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 sudo apt install -y git
 sudo apt install -y curl

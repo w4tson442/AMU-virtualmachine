@@ -1,1 +1,1 @@
-sudo apt-get install -y php7.2
+sudo apt-get install -y php7.2 libapache2-mod-php7.2 php7.2-dom php7.2-json php7.2-mysql php7.2-zip php7.2-fpm php7.2-mbstring
