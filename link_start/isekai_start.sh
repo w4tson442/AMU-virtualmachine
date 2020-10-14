@@ -18,9 +18,6 @@ sudo apt install -y curl
 sudo cp -r /vagrant/* /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
 
-sudo chown -R vagrant /var/www/html
-sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
-
 #give apache permission to run scripts
 sudo a2enmod mpm_prefork cgi
 
@@ -30,6 +27,9 @@ echo "---------- INSTALL LANGUAGE ----------"
 #if you want to add a language, change it here
 sh language_installs/python/script.sh
 echo "-------------- FINISHED --------------"
+
+sudo chown -R vagrant /var/www/html
+sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
 
 sudo service apache2 restart
 
