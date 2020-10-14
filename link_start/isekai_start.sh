@@ -18,12 +18,17 @@ sudo apt install -y curl
 sudo cp -r /vagrant/* /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
 
+sudo chown -R vagrant /var/www/html
+sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
+
 sudo service apache2 restart
 
 echo "---------- INSTALL LANGUAGE ----------"
 #if you want to add a language, change it here
-sh language_installs/php_script.sh
+sh language_installs/php/script.sh
 echo "-------------- FINISHED --------------"
+
+sudo service apache2 restart
 
 #setting up DATABASE
 # 1. create user and identification for future access
