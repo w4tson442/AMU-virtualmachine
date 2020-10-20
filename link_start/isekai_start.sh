@@ -28,6 +28,9 @@ echo "---------- INSTALL LANGUAGE ----------"
 sh language_installs/python/script.sh
 echo "-------------- FINISHED --------------"
 
+#if you don't want to use the fontawesome file comment this line out
+sudo cp -r /home/vagrant/font-awesome /var/www/html
+
 sudo chown -R vagrant /var/www/html
 sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
 
