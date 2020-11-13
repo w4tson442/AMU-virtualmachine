@@ -1,4 +1,4 @@
-# TOYO's ISEKAI <br/>
+# TOYO's ISEKAI(Virtual Box) <br/>
 ##### last updated: August 27th, 2020 (mm, dd, yyyy) <br/>
 ###### We will walk you through how you can access your personal isekai for both (Windows) and (Mac) Users. This will be utalizing virtual machine, vagrant and localhost to create a free and useful enviroment for development. Please enjoy.
 
