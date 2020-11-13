@@ -4,6 +4,9 @@
 # 2. installing a database (MYSQL)
 echo "============ START ISEKAI ============"
 
+sudo apt update
+sudo apt upgrade -y
+
 # install apache2(web server)
 # link: (https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)
 sudo apt install -y apache2 mysql-server
