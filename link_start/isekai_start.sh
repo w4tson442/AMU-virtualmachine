@@ -22,7 +22,11 @@ sudo cp -r /vagrant/* /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
 
 #give apache permission to run scripts
-sudo a2enmod mpm_prefork cgi
+#sudo a2enmod mpm_prefork cgi
+
+sudo apt-get install -y apache2-dev
+
+sudo chown -R vagrant /home/vagrant
 
 sudo service apache2 restart
 
