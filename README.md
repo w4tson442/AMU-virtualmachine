@@ -22,11 +22,11 @@
 
 ### Setting Up DATABASE Connection
 1. create user and identification for future access
-2. example will be the following
-``` sudo mysql -e "create database isekai;" ```
-``` sudo mysql -e "create user 'isekai'@'localhost' identified by 'test123';" ```
-``` sudo mysql -e "grant all privileges on isekai.* to 'isekai'@'localhost';" ```
-``` sudo mysql -e "flush privileges;" ```
+2. example will be the following  
+``` sudo mysql -e "create database isekai;" ```  
+``` sudo mysql -e "create user 'isekai'@'localhost' identified by 'test123';" ```  
+``` sudo mysql -e "grant all privileges on isekai.* to 'isekai'@'localhost';" ```  
+``` sudo mysql -e "flush privileges;" ```  
 3. access by ``` mysql -u ____ -h _____ -p ```
 4. -u is the user
 5. -h is the host (if localhost then leave empty)
