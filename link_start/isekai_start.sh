@@ -7,40 +7,33 @@ echo "============ START ISEKAI ============"
 sudo apt update
 sudo apt upgrade -y
 
+
+
 # install apache2(web server)
 # link: (https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)
-sudo apt install -y apache2 mysql-server
+sudo apt install -y apache2 apache2-dev mysql-server
+sudo apt install -y git curl
 
-sudo apt update
-sudo apt upgrade -y
 
-sudo apt install -y git
-sudo apt install -y curl
 
-#moving check.html into the document root
+#moving contents of project_here into webroot
 sudo cp -r /vagrant/* /home/vagrant
+sudo chown -R vagrant /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
+
+
 
 #give apache permission to run scripts
 #sudo a2enmod mpm_prefork cgi
 
-sudo apt-get install -y apache2-dev
 
-sudo chown -R vagrant /home/vagrant
-
-sudo service apache2 restart
 
 echo "---------- INSTALL LANGUAGE ----------"
 #if you want to add a language, change it here
 sh language_installs/python/script.sh
 echo "-------------- FINISHED --------------"
 
-#if you don't want to use the fontawesome file comment this line out
-sudo cp -r /home/vagrant/font-awesome /var/www/html
-
-sudo chown -R vagrant /var/www/html
 sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
-
 sudo service apache2 restart
 
 #setting up DATABASE

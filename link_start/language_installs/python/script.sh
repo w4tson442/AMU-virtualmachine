@@ -6,7 +6,10 @@ sudo apt-get install -y python3-pip libapache2-mod-wsgi-py3
 sudo pip3 install pymysql
 sudo pip3 install virtualenv
 
+# ============================================================================
+#IF you need Django
 #sudo pip3 install django
 
+#Default config installed for you to work on python
 #sudo rm /etc/apache2/sites-enabled/000-default.conf
 #sudo cp language_installs/python/000-default.conf /etc/apache2/sites-enabled/
