@@ -18,8 +18,9 @@ sudo apt install -y git curl
 
 #moving contents of project_here into webroot
 sudo cp -r /vagrant/* /home/vagrant
-sudo chown -R vagrant /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
+sudo chown -R vagrant:vagrant /home/vagrant
+sudo chown -R www-data:www-data /var/www/html
 
 
 
