@@ -1,5 +1,5 @@
 # BY: Justin Ichiro Toyomitsu
-#main script to install basic neccessities
+# main script to install basic neccessities
 # 1. installing Apache
 # 2. installing a database (MYSQL)
 echo "============ START ISEKAI ============"
@@ -13,15 +13,19 @@ sudo apt upgrade -y
 # link: (https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)
 sudo apt install -y apache2 apache2-dev mysql-server
 sudo apt install -y git curl
+git config --global core.editor "vim"
 
 
 
-#moving contents of project_here into webroot
+# moving contents of project_here into webroot
+# understanding permissions: read=4, write=2, execute=1. [ ex) 7=all permission, 4=only read ]
+# understanding ownerships: User, Group, Others [ 3 letters for each ex) rwxr-xr-- = User has all access, Group doesn't have Write, Others only read ]
+# link: (https://www.guru99.com/file-permissions.html)
 sudo cp -r /vagrant/* /home/vagrant
 sudo cp -r /home/vagrant/project_here/* /var/www/html
 sudo chown -R vagrant:vagrant /home/vagrant
-sudo chown -R www-data:www-data /var/www/html
-
+sudo chown -R www-data:vagrant /var/www/html
+sudo chmod -R +774 /var/www/html
 
 
 #give apache permission to run scripts
@@ -36,17 +40,5 @@ echo "-------------- FINISHED --------------"
 
 sudo sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
 sudo service apache2 restart
-
-#setting up DATABASE
-# 1. create user and identification for future access
-# 2. example will be the following
-sudo mysql -e "create database isekai;
-create user 'isekai'@'localhost' identified by 'test123';
-grant all privileges on isekai.* to 'isekai'@'localhost';
-flush privileges;"
-# 3. access by mysql -u ____ -h _____ -p
-# 4. -u is the user
-# 5. -h is the host (if localhost then leave empty)
-# 6. hit enter and type in the password
 
 echo "============= END ISEKAI ============="
