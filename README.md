@@ -11,7 +11,7 @@
 ## 🛠 SETUP
 1. Download [vagrant](https://www.vagrantup.com/downloads)
 2. Download [VIrtualBox](https://www.virtualbox.org/)
-3. gitclone [this repository](https://github.com/w4tson442/AMU-virtualmachine.git) and cd into link_start
+3. gitclone [this repository](https://github.com/w4tson442/AMU-virtualmachine.git) and cd into link_start (🚨 If you have any projects, move them to the project_here directory)
 4. Start up Vagrant!
     ```sh
     vagrant up
