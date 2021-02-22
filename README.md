@@ -37,7 +37,7 @@
 3. Creating DB(MYSQL) connection "I want a SQL database"
    ```sh
    sudo mysql -e "create database isekai;"
-   sudo mysql -e "create user 'isekai'@'localhost' identified by 'test123';
+   sudo mysql -e "create user 'isekai'@'localhost' identified by 'test123';"
    sudo mysql -e "grant all privileges on isekai.* to 'isekai'@'localhost';"
    sudo mysql -e "flush privileges;"
    ```  
