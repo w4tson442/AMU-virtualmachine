@@ -11,12 +11,12 @@
 ## 🛠 SETUP
 1. Download [vagrant](https://www.vagrantup.com/downloads)
 2. Download [VIrtualBox](https://www.virtualbox.org/)
-3. GITCLONE TOYO's ISEKAI && go to the directory in command prompt
+3. gitclone [this repository](https://github.com/w4tson442/AMU-virtualmachine.git) and cd into link_start
 4. Start up Vagrant!
     ```sh
     vagrant up
     ```
-6. Now start up vagrant and go to [localhost](http://127.0.0.1:8080/check.html)
+6. Go to [localhost](http://127.0.0.1:8080/check.html)
 7. If you see the messages from check.html congratz! You can start!
 
 ### TLDR of Where Your Files Are
